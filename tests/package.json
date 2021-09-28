@@ -1,0 +1,10 @@
+{
+    "name": "coursedog",
+    "cypress-cucumber-preprocessor": {
+        "nonGlobalStepDefinitions": true
+    },
+    "dependencies": {
+        "cypress": "8.4.1",
+        "cypress-cucumber-preprocessor": "4.2.0"
+    }
+}

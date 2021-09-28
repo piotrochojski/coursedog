@@ -1,0 +1,7 @@
+{
+    "testFiles": "**/*.feature",
+    "baseUrl":"https://damian-events.coursedog.com/",
+    "watchForFileChanges":false,
+    "defaultCommandTimeout":8000
+}
+
