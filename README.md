@@ -4,6 +4,8 @@ Recruitment Task - QA Engineer Coursedog
 Some notes about Cypress:
 To run tests you need some additional dependencies/plugins. To install them, go to project directory and execute: "npm install". Then run them by executing i.e. "npx cypress@8.4.1 open"
 
+Very important here is that elements' selectors are in xpath or by classes, what should not be practised. The most robust solution is to add to all tested elements "data-test" attributes to be sure they are not modified during development of app.
+
 I haven't written too much additional scenarios, but I chose "Search" input as a part of app to be tested with some more scenarios. There are of course many more places where additional tests could be written, as there are many i.e. combinations of filtering. If there is such need I can add them in upcoming days. 
 
 Questions to Product Owner about stories:
