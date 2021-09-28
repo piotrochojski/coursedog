@@ -33,6 +33,11 @@ When('user clicks on Featured Events button', () => {
     cy.wait('@meetings_request')
 })
 
+When('user types {string} in search input and press enter', (search_phraze) => {
+    damianEventsLanding.search_events_input().type(search_phraze+'{enter}')
+
+})
+
 Then('user clicks event card name {string}', (event_name) => {
     damianEventsLanding.event_content().contains(event_name).click()
 })

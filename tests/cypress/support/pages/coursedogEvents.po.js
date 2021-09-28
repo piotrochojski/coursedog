@@ -10,6 +10,7 @@ const events_grid = 'section'
 const event_content = '.card-content'
 const todays_events_button = '[href="/today"]'
 const featured_events_button = '[href="/featured"]'
+const search_events_input = '.search__input'
 const add_to_calendar_link = '.mt-2 > .mr-2'
 const add_to_google_calendar_link = 'a > .btn'
 const event_type_details = '.items-start > .font-semibold'
@@ -39,6 +40,9 @@ class damianEventsLandingPage {
     }
     featured_events_button() {
         return cy.get(featured_events_button)
+    }
+    search_events_input() {
+        return cy.get(search_events_input)
     }
 }
 
