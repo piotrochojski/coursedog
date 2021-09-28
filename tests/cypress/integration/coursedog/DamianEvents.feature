@@ -48,3 +48,37 @@ Scenario: Search for events by their name
     When user types "Tokyo" in search input and press enter
     Then event named "Tokyo" is shown
     And there are exactly 1 events shown on the page
+
+# TO BE DEFINED IF NO RESULTS SHOULD BE SHOWN OR ALL EVENTS INSTEAD
+Scenario: Search for empty string
+    Given Damian Events page is opened
+    When user types " " in search input and press enter
+    #Then no events shown with message "No events found"
+
+Scenario: Search for events consist of more than one word
+    Given Damian Events page is opened
+    When user types "Model UN" in search input and press enter
+    Then event named "Model UN" is shown
+    And there are exactly 3 events shown on the page
+
+# THE TESTS FAILS - BUG TO BE ISSUED
+# Scenario: Search for events with special characters
+#     Given Damian Events page is opened
+#     When user types "// an event &&" in search input and press enter
+#     Then no events shown with message "No events found"
+
+Scenario: Search for events shouldn't be case sensitive
+    Given Damian Events page is opened
+    When user types "tokyo" in search input and press enter
+    Then event named "Tokyo" is shown
+    And there are exactly 1 events shown on the page
+
+Scenario: Filter events by organization
+    Given Damian Events page is opened
+    When user types " " in search input and press enter
+    And user selects "Model UN" from Filter by organization dropdown
+    Then there are exactly 3 events shown on the page
+    And event named "Model UN National Competition" is shown
+    And event named "Model UN Germany Visit" is shown
+    And event named "Model UN International Conference" is shown
+

@@ -17,6 +17,8 @@ const event_type_details = '.items-start > .font-semibold'
 const organization_event_details = ':nth-child(6) > .font-semibold'
 const contacts_event_details = '.cursor-pointer'
 const event_description_details = '.text-theme-darkest'
+const xpath_filter_by_organization_dropdown = '//*[@id="orgSelect"]'
+
 
 
 class damianEventsLandingPage {
@@ -67,9 +69,14 @@ class eventDetailsCard {
     }
 }
 
-
+class advancedSearchGrid {
+    xpath_filter_by_organization_dropdown() {
+        return cy.xpath(xpath_filter_by_organization_dropdown)
+    }
+}
 
 export {
     damianEventsLandingPage,
-    eventDetailsCard
+    eventDetailsCard,
+    advancedSearchGrid
 }
